@@ -27,7 +27,12 @@ body {
 }
 
 .header {
+	&__content-bg {
+		display: none;
+	}
 	&__content {
+		max-width: 1200px;
+		margin: 0 auto;
 		padding-block-start: 2em;
 	}
 	&__logo {
@@ -108,7 +113,7 @@ body {
 	}
 }
 
-@media (576px <= width) {
+@media (36rem <= width) {
 	.header {
 		&__logo {
 			img {
@@ -127,4 +132,59 @@ body {
 	}
 }
 
+@media (48rem <= width) {
+	.header {
+		position: relative;
+		&__content {
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			z-index: 0;
+		}
+		&__logo {
+			height: 100px;
+			padding: 3em;
+			grid-row: 1 / 2;
+			grid-column: 1 / 2;
+		}
+		&__body {
+			padding: 10em 3em 5em;
+			text-align: left;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+		&__img {
+			height: 100vh;
+			max-height: 900px;
+			grid-row: 1 / 2;
+			grid-column: 2 / 3;
 
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__content-bg {
+			display: block;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+		}
+	}
+}
+@media (62rem <= width) {
+	.header {
+		&__btn {
+			padding: 1em 3.2em;
+		}
+	}
+}
+@media (71rem <= width) {
+	.header {
+		&__body {
+			padding: 10em 8em 5em 3em;
+		}
+	}
+}

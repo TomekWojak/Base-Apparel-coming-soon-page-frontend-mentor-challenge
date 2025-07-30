@@ -21,9 +21,98 @@ button {
   	hsl(0, 0%, 100%),
   	hsl(0, 100%, 98%)
   );
-  --gradientLight: linar-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --gradientLight: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
+}
+
+.header__content {
+  padding-block-start: 2em;
+}
+.header__logo {
+  padding: 0 2em 2em;
+}
+.header__logo img {
+  width: 120px;
+  height: auto;
+}
+.header__img img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  font-style: italic;
+}
+.header__body {
+  padding: 4em 2em;
+  text-align: center;
+}
+.header__title {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  line-height: 115%;
+  font-weight: 600;
+  color: var(--gray);
+  font-size: clamp(2.25rem, 7.5vw, 4rem);
+}
+.header .accent-text {
+  font-weight: 300;
+  color: var(--pink);
+}
+.header__text {
+  margin-block-start: 1em;
+  font-weight: 400;
+  color: var(--pink);
+  font-size: clamp(0.9rem, 2.7vw, 1.2rem);
+  line-height: 150%;
+  word-spacing: 1px;
+}
+.header__input {
+  position: relative;
+  margin-block-start: 2em;
+}
+.header__input input {
+  width: 100%;
+  padding: 1.3em;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  border: 1px solid var(--pink);
+}
+.header__input input::placeholder {
+  color: var(--pink);
+  opacity: 0.5;
+}
+.header__input input:focus, .header__input input:focus-visible {
+  outline: 1px solid var(--pink);
+}
+.header__btn {
+  position: absolute;
+  height: calc(100% + 1px);
+  top: 50%;
+  right: 0;
+  transform: translate(10%, -50%);
+  padding: 1em 2em;
+  border-radius: 30px;
+  color: #fff;
+  border: none;
+  background: var(--gradientLight);
+  cursor: pointer;
+  box-shadow: 3px 10px 20px hsla(0, 36%, 70%, 0.533);
+}
+
+@media (576px <= width) {
+  .header__logo img {
+    width: 140px;
+  }
+  .header__text {
+    margin-block-start: 1.5em;
+  }
+  .header__input {
+    margin-block-start: 3em;
+  }
+  .header__btn {
+    padding: 1em 2.5em;
+  }
 }/*# sourceMappingURL=style.css.map */

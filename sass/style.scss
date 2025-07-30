@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+input,
+button {
+	display: block;
+	font-family: inherit;
+}
+:root {
+	--pink: hsl(0, 36%, 70%);
+	--red: hsl(0, 93%, 68%);
+	--gray: hsl(0, 6%, 24%);
+	--gradientVeryLight: linear-gradient(
+		135deg,
+		hsl(0, 0%, 100%),
+		hsl(0, 100%, 98%)
+	);
+	--gradientLight: linar-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+body {
+	font-family: "Josefin Sans", sans-serif;
+}

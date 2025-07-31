@@ -32,14 +32,10 @@ body {
   display: none;
 }
 .header__content {
-  max-width: 1200px;
-  margin: 0 auto;
   padding-block-start: 2em;
 }
 .header__logo {
-  padding: 0 2em 2em;
-}
-.header__logo img {
+  margin: 0 0 2em 2em;
   width: 120px;
   height: auto;
 }
@@ -60,7 +56,7 @@ body {
   line-height: 115%;
   font-weight: 600;
   color: var(--gray);
-  font-size: clamp(2.25rem, 7.5vw, 4rem);
+  font-size: clamp(2.25rem, 7.5vw, 5rem);
 }
 .header .accent-text {
   font-weight: 300;
@@ -84,6 +80,7 @@ body {
   border-radius: 30px;
   font-size: 0.85rem;
   border: 1px solid var(--pink);
+  color: var(--pink);
 }
 .header__input input::placeholder {
   color: var(--pink);
@@ -108,7 +105,7 @@ body {
 }
 
 @media (36rem <= width) {
-  .header__logo img {
+  .header__logo {
     width: 140px;
   }
   .header__text {
@@ -123,31 +120,30 @@ body {
 }
 @media (48rem <= width) {
   .header {
+    height: 100vh;
     position: relative;
   }
   .header__content {
+    height: 100%;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    z-index: 0;
+    grid-template-rows: auto 1fr;
   }
   .header__logo {
-    height: 100px;
-    padding: 3em;
     grid-row: 1/2;
     grid-column: 1/2;
   }
   .header__body {
-    padding: 10em 3em 5em;
+    margin: 0 auto;
+    max-width: 1200px;
     text-align: left;
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 2/3;
   }
   .header__img {
-    height: 100vh;
-    max-height: 900px;
-    grid-row: 1/2;
     grid-column: 2/3;
+    grid-row: 1/3;
   }
   .header__img img {
     height: 100%;
@@ -166,9 +162,26 @@ body {
   .header__btn {
     padding: 1em 3.2em;
   }
-}
-@media (71rem <= width) {
+  .header__logo {
+    margin-inline-start: 4em;
+    margin-block-start: 4em;
+    max-width: 1200px;
+  }
   .header__body {
-    padding: 10em 8em 5em 3em;
+    padding: 4em;
+  }
+}
+@media (75rem <= width) {
+  .header__logo {
+    width: 160px;
+  }
+  .header__body {
+    padding: 6em 8em 6em 4em;
+  }
+  .header__input {
+    width: 80%;
+  }
+  .header__input input {
+    padding: 1.5em 2em;
   }
 }/*# sourceMappingURL=style.css.map */
